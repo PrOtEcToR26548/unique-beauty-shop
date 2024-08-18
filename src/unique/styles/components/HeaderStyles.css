@@ -1,0 +1,163 @@
+/* Reset and Basic Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+/* Header Container */
+.header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Menu Icon Styles */
+.menu-icon-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Space between menu icon and logo */
+  position: relative; /* Needed for positioning overlay menu */
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+.menu-icon.open .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(6px);
+}
+
+.menu-icon.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px);
+}
+
+/* Logo Styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  margin-right: 30px; /* Increased space between logo and search bar */
+}
+
+.logo {
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Search Bar Styles */
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: auto;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+/* Navigation Links Styles */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Overlay Menu Styles */
+.overlay-menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 60px; /* Adjust to align with header height */
+  left: 0;
+  width: 250px; /* Adjust as needed */
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.overlay-menu.show {
+  display: flex;
+  transform: translateX(0);
+}
+
+.overlay-menu-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay-menu-item {
+  padding: 15px 0;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.overlay-menu-item:hover {
+  color: #007bff;
+  background-color: #f4f4f4;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .search-bar {
+    display: none;
+  }
+
+  .logo-container {
+    margin-right: 10px; /* Reduce space in smaller screens */
+  }
+}

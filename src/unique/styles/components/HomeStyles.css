@@ -1,0 +1,118 @@
+/* Main container for the Home page */
+.home-container {
+    background: linear-gradient(135deg, #fdfbfb 30%, #ebedee 100%);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Promotional Banner Section */
+.promo-section {
+    text-align: center;
+}
+
+.promo-image {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.promo-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.promo-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.promo-button {
+    font-size: 1.2rem;
+}
+
+/* Featured Categories Section */
+.featured-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Category Card Styles */
+.category-card {
+    margin-bottom: 20px;
+}
+
+/* Testimonial Section */
+.testimonials-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Exclusive Offers Section */
+.exclusive-offers-section {
+    background: linear-gradient(135deg, #ff4081 30%, #ff80ab 100%);
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.exclusive-offers-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.exclusive-offers-section p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.subscribe-button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: white;
+    color: #ff4081;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #ff80ab;
+    color: white;
+}
+
+/* Adding fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .exclusive-offers-section {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .exclusive-offers-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .exclusive-offers-section p {
+        font-size: 1.1rem;
+    }
+}

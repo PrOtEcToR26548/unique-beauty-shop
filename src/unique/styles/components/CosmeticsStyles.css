@@ -1,0 +1,13 @@
+#cosmetics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product {
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}

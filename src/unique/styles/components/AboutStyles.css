@@ -1,0 +1,338 @@
+/* Container and Layout */
+.about-container {
+    background: linear-gradient(135deg, #f0f0f0 30%, #ffffff 100%);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 20px auto; /* Centering the container */
+    max-width: 1200px; /* Max width for better responsiveness */
+    animation: fadeIn 1s ease-in-out;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image Styling */
+.about-image {
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.about-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Section Titles */
+.about-container h2,
+.about-container h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Why Choose Us Section */
+ul.list-unstyled {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #555;
+    padding-left: 20px;
+    margin-bottom: 40px; /* Space between sections */
+}
+
+ul.list-unstyled li {
+    margin-bottom: 10px;
+    position: relative;
+    animation: slideIn 0.5s ease forwards; /* Animation for list items */
+}
+
+ul.list-unstyled li::before {
+    content: "✅";
+    margin-right: 10px;
+    color: #28a745;
+}
+
+/* Slide-in Animation for List Items */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Meet Our Team Section */
+.team-member-card {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding for better spacing */
+    margin-bottom: 20px; /* Space between team members */
+}
+
+.team-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Customer Testimonials Section */
+.testimonial-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-bottom: 20px; /* Space between testimonials */
+}
+
+.testimonial-card::before {
+    content: "“";
+    font-size: 50px;
+    color: #feb47b;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+}
+
+/* Blockquote Footer */
+.blockquote-footer {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Join Our Community Section */
+.join-community-section {
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #7f7fd5);
+    background-size: 800% 800%;
+    animation: gradientAnimation 8s ease infinite;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 40px;
+    color: white;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.join-community-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px; /* Adjusted for spacing */
+}
+
+.join-community-section p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* Social Media Icons */
+.social-media-icons a {
+    margin: 0 10px;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.social-media-icons a:hover {
+    transform: scale(1.2);
+    animation: bounce 0.3s;
+}
+
+/* Tooltip for Social Media Icons */
+.social-media-icons a:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    animation: showTooltip 0.3s forwards;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Tooltip Animation */
+@keyframes showTooltip {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Follow Us Animation */
+.follow-us {
+    opacity: 0;
+    animation: fadeInFollowUs 0.5s ease forwards;
+}
+
+@keyframes fadeInFollowUs {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Subscribe Form */
+.subscribe-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    outline: none;
+    width: 80%;
+    max-width: 300px;
+    transition: border 0.3s ease;
+    font-size: 16px;
+}
+
+.subscribe-input:focus {
+    border: 2px solid #feb47b;
+}
+
+/* Subscribe Button */
+.subscribe-button {
+    position: relative;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.subscribe-button::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border-radius: 5px;
+    border: 2px solid rgba(0, 123, 255, 0.7);
+    animation: pulse 2s infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+}
+
+/* Success Message */
+.success-message {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Additional Styles for Smoothness and Cohesion */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4; /* Light background for the page */
+    margin: 0;
+    padding: 0;
+}
+
+/* Smooth Scroll for Better User Experience */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Flexbox for about page content */
+.about-content {
+    display: flex; /* Enable flexbox */
+    justify-content: space-between; /* Space out the sections */
+    align-items: flex-start; /* Align items to the top */
+    margin-top: 40px; /* Space from top */
+}
+
+.about-section {
+    flex: 1; /* Allow sections to grow */
+    margin-right: 20px; /* Space between sections */
+}
+
+.about-image-section {
+    flex: 0 0 300px; /* Fixed width for the image section */
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .about-image-section {
+        margin-bottom: 20px; /* Space below image on smaller screens */
+    }
+}

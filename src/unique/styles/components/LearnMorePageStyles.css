@@ -1,0 +1,34 @@
+/* LearnMoreStyles.css */
+
+.learn-more-container {
+    background: linear-gradient(135deg, #f9f9f9 30%, #ffffff 100%);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 20px;
+}
+
+/* Card Styling */
+.card {
+    border: none; /* Remove default border */
+    transition: transform 0.3s ease; /* Smooth scale effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Heading Styles */
+.learn-more-container h2,
+.learn-more-container h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    font-weight: 700;
+}
+
+/* Paragraph Styles */
+.learn-more-container p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #555;
+}

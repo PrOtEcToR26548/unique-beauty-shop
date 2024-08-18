@@ -1,0 +1,73 @@
+/* src/unique/styles/components/ToysStyles.css */
+
+.toys-container {
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+  min-height: 100vh; /* Ensure there's enough height */
+}
+
+.toys-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ensure flexibility */
+  gap: 20px;
+  justify-content: center; /* Center grid items */
+}
+
+.toy-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  width: 100%; /* Ensure card takes full available width in grid */
+  max-width: 400px; /* Set max width to 400px */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.toy-card:hover {
+  transform: scale(1.05);
+}
+
+.toy-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.toy-name {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #444;
+}
+
+.toy-description {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  color: #777;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Show only 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toy-description.full {
+  display: block;
+  -webkit-line-clamp: unset; /* Show all lines */
+  -webkit-box-orient: unset;
+}
+
+.toggle-description {
+  color: #ff6b6b;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.toy-price {
+  font-weight: bold;
+  margin-top: 10px;
+}

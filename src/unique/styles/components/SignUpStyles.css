@@ -1,0 +1,160 @@
+/* Ensure the parent container is set to take the full viewport height */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.signup-container {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  min-height: 100vh; /* Full viewport height */
+  background-color: #f8f9fa; /* Light background for the whole page */
+}
+
+/* Signup page styling */
+.signup-page {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.signup-page h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.method-options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.method-option {
+  cursor: pointer;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.method-option:hover {
+  background-color: #f1f3f5;
+  border-color: #007bff;
+  transform: translateY(-2px);
+}
+
+.method-option.selected {
+  border-color: #007bff;
+  background-color: #e9f5ff;
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2);
+}
+
+.method-option i {
+  font-size: 22px;
+  color: #007bff;
+}
+
+.method-option span {
+  font-size: 18px;
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-group input {
+  padding-right: 40px; /* Space for the eye icon */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: #007bff;
+}
+
+form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.error-message {
+  color: #dc3545;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.signin-link {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.signin-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
