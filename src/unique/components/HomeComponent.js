@@ -6,7 +6,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import beautyImage from '../assets/images/beauty-products.jpg';
 import toysImage from '../assets/images/toys.jpg';
 import jewelryImage from '../assets/images/jewelry.jpg';
-import promoImage from '../assets/images/promo-banner.jpg';
+import promoImage from '../assets/images/unique-banner.jpeg';
 
 const HomeComponent = () => {
     return (
@@ -15,8 +15,8 @@ const HomeComponent = () => {
             <Row className="promo-section text-center">
                 <Col md={12}>
                     <img src={promoImage} alt="Promo Banner" className="img-fluid promo-image" />
-                    <h1 className="mt-4 promo-title">Big Summer Sale - Up to 50% Off!</h1>
-                    <p className="promo-subtitle">Discover amazing deals on beauty products, toys, jewelry, and more.</p>
+                    <h1 className="mt-4 promo-title"><b>UNIQUE BEAUTY SHOP RATIA</b></h1>
+                    <p className="promo-subtitle">A Complete Bridal Showroom.</p>
                     <Button variant="danger" className="promo-button mt-3">Shop the Sale</Button>
                 </Col>
             </Row>
